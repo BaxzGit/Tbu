@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabungan Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🏦 Tabungan Online</h1>
+
+    <div id="auth">
+      <h2>Daftar / Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="register()">Daftar</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <h2>Halo, <span id="user"></span></h2>
+      <p>Saldo Anda: <b id="saldo">Rp0</b></p>
+      <input type="number" id="amount" placeholder="Nominal">
+      <button onclick="deposit()">Setor</button>
+      <button onclick="withdraw()">Tarik</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <div id="adminPanel" class="hidden">
+      <h2>Admin Panel</h2>
+      <div id="usersList"></div>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
